@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/team.css">
+</head>
+<body>
+
+    <header>   
+        <nav>
+            <a href="index.html"><span class="logo">World<br>Stadium</span></a>
+            <ul class="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Novidades</a>
+                </li>
+                <li>
+                    <a href="#">Contatos</a>
+                </li>
+                <li>
+                    <a href="#">Ajuda</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trophies">
+            <div id="world-cup" class="trophy">
+                <img src="assets/wc-removebg-preview.png" alt="Brasil">
+                <p>World Cup</p>
+                <p>5</p>
+            </div>
+            <div id="world-cup" class="trophy">
+                <img src="assets/wc-removebg-preview.png" alt="Brasil">
+                <p>World Cup</p>
+                <p>5</p>
+            </div>
+            <div id="world-cup" class="trophy">
+                <img src="assets/wc-removebg-preview.png" alt="Brasil">
+                <p>World Cup</p>
+                <p id="brasil-cup">5</p>
+            </div>
+        </section>
+
+        <section class="mini-trophies">
+            <img class="mini-trophy" src="assets/wc-removebg-preview.png" alt="trophy">
+        </section>
+        <script>
+            function trophyCounter(){
+                var ptxt = document.getElementById("brasil-cup");
+                var pcontent = ptxt.textContent;
+                var trophiesNum = parseInt(pcontent);
+                
+                var sectrophy = document.querySelector(".mini-trophies");
+    
+                sectrophy.innerHTML = '';
+    
+                for (var i = 0; i < trophiesNum; i++) {
+                    var trophy = document.createElement("img");
+                    trophy.classList.add("mini-trophy");
+                    trophy.src = "assets/wc-removebg-preview.png";
+                    sectrophy.appendChild(trophy);
+                }
+            }
+            trophyCounter();
+        </script>
+    </main>
+
+    <footer>
+        <p>Desenvolvido com ❤️ por Daniel Fernandes</p>
+    </footer>
+    
+</body>
+</html>
